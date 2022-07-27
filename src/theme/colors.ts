@@ -1,26 +1,18 @@
 export const colors: any = {
-  primary: '#356AFD',
+  primary: '#FF781F',
   white: '#FFFFFF',
   black: '#000000',
 
   brand: {
-    primary: '#356AFD',
-  },
-
-  games: {
-    csgo: '#08B5C0',
-    valorant: '#FF4656',
-    lol: '#7822FF',
-    wildrift: '#E3C689',
-    fortnite: '#3FE8AE',
+    primary: '#FF781F',
   },
 
   shadow: {
     focus: '#356afd66',
   },
 
-  surface: {
-    background: '#141414',
+  background: {
+    default: '#141414',
     primary: '#1a1a1a',
     secondary: '#1F1F1F',
     tertiary: '#292929',

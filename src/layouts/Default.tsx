@@ -33,7 +33,7 @@ const DefaultLayout = ({
           name="description"
           content={description ? description : t('heading')}
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <Header
         title={title}
