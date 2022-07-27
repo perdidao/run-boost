@@ -1,0 +1,8 @@
+# Files
+*.html
+
+# Folders
+dist/
+.vscode
+.husky
+.infra

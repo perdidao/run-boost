@@ -1,0 +1,34 @@
+import React from 'react'
+
+// i18n
+// import { useTranslations } from 'next-intl'
+
+// Helpers
+
+// Components
+
+// Assets
+
+// Env
+
+// Types
+import { {{pascalCase name}}Props as Props } from './{{pascalCase name}}.types'
+
+// Styles
+import * as Styled from './{{pascalCase name}}.styles'
+
+const {{pascalCase name}} = (props: Props): JSX.Element => {
+  const {
+    title
+  } = props
+
+  // const { t } = useTranslations()
+
+  return (
+    <Styled.Container>
+      {title}
+    </Styled.Container>
+  )
+}
+
+export { {{pascalCase name}} }
