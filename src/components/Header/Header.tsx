@@ -6,6 +6,7 @@ import React from 'react'
 // Helpers
 
 // Components
+import Link from 'next/link'
 
 // Assets
 
@@ -16,7 +17,6 @@ import { HeaderProps as Props } from './Header.types'
 
 // Styles
 import * as Styled from './Header.styles'
-import Link from 'next/link'
 
 const Header = (props: Props): JSX.Element => {
   const {
@@ -27,7 +27,7 @@ const Header = (props: Props): JSX.Element => {
 
   return (
     <Styled.Container>
-      <Styled.Title>Gymtastic</Styled.Title>
+      <Styled.Title>Run Boost</Styled.Title>
       <nav>
         {title}
         <Link href="/teste">Teste</Link>

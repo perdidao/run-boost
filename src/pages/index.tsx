@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <DefaultLayout title="Início">
       <section>
-        Gymtastic
+        Run Boost
       </section>
     </DefaultLayout>
   )
