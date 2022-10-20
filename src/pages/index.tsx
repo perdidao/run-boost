@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <DefaultLayout title="Início">
       <section>
-        Run Boost
+        Your index page component
       </section>
     </DefaultLayout>
   )

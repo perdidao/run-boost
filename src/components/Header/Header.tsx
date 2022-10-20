@@ -1,7 +1,7 @@
 import React from 'react'
 
 // i18n
-// import { useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 
 // Helpers
 
@@ -23,14 +23,14 @@ const Header = (props: Props): JSX.Element => {
     title
   } = props
 
-  // const { t } = useTranslations()
+  const t = useTranslations('global')
 
   return (
     <Styled.Container>
-      <Styled.Title>Run Boost</Styled.Title>
+      <Styled.Title>{t('title')}</Styled.Title>
       <nav>
         {title}
-        <Link href="/teste">Teste</Link>
+        <Link href="/another-page">Outra página</Link>
       </nav>
     </Styled.Container>
   )
