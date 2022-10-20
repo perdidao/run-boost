@@ -27,7 +27,7 @@ const DefaultLayout = ({
     <ThemeProvider theme={theme}>
       <Head>
         <title>
-          {title} | Run Boost - {t('heading')}
+          {`${title} | Run Boost - ${t('heading')}`}
         </title>
         <meta
           name="description"
