@@ -17,6 +17,7 @@ import { HeaderProps as Props } from './Header.types'
 
 // Styles
 import * as Styled from './Header.styles'
+import { useGetProjectInfo } from '@services/useGetProjectInfo'
 
 const Header = (props: Props): JSX.Element => {
   const {
@@ -25,15 +26,40 @@ const Header = (props: Props): JSX.Element => {
 
   const t = useTranslations('global')
 
+  const {
+    data,
+    isFetching,
+    isError
+  } = useGetProjectInfo()
+
+  console.log(data)
+
+  const renderContent = (): JSX.Element => {
+    if (isFetching) {
+      return <p>Carregando...</p>
+    }
+    
+    if (isError || !data) {
+      return <p>An error occurred...</p>
+    }
+
+    return (
+      <>
+        <Styled.Title>{data.title}</Styled.Title>
+        <p>{data.description}</p>
+        <nav>
+          {title}
+          <Link href="/another-page">Outra página</Link>
+        </nav>
+      </>
+    )
+  }
+
   return (
     <Styled.Container>
-      <Styled.Title>{t('title')}</Styled.Title>
-      <nav>
-        {title}
-        <Link href="/another-page">Outra página</Link>
-      </nav>
+      {renderContent()}
     </Styled.Container>
   )
 }
 
-export { Header }
+export default Header

@@ -12,9 +12,9 @@ import { LayoutProps } from '@layouts/Default.types'
 
 // Styles
 import { theme } from '@theme/default'
+import { Header } from '@components/Header'
 
 // Components
-import { Header } from '@components/Header'
 
 const DefaultLayout = ({
   children,
