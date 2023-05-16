@@ -8,12 +8,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "tsc --noEmit && eslint --ext .ts,.tsx ./ --fix --max-warnings 0",
-    "prettier:write": "npx prettier --write **/*.{js,jsx,ts,tsx,json} && npx prettier --write *.{js,jsx,ts,tsx,json}"
+    "prettier:write": "npx prettier --write **/*.{ts,tsx,json} && npx prettier --write *.{ts,tsx,json}"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "prettier --write *.{js,jsx,ts,tsx,json}",
-      "prettier --write **/*.{js,jsx,ts,tsx,json}",
+      "prettier --write *.{ts,tsx,json}",
+      "prettier --write **/*.{ts,tsx,json}",
       "eslint --ext .ts,.tsx ./ --fix --max-warnings 0"
     ]
   },
