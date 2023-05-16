@@ -29,7 +29,7 @@ const DefaultLayout = ({ children, title, description }: LayoutProps) => {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Header title={title} />
+      <Header />
       {children}
     </ThemeProvider>
   )

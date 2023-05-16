@@ -1,10 +1,11 @@
+import { HomeContent } from '@components/HomeContent'
 import { DefaultLayout } from '@layouts/Default'
 import type { GetStaticProps, NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
     <DefaultLayout title="Início">
-      <section>Your index page component</section>
+      <HomeContent />
     </DefaultLayout>
   )
 }

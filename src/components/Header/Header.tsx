@@ -6,48 +6,44 @@ import { useTranslations } from 'next-intl'
 // Helpers
 
 // Components
-import Link from 'next/link'
+import Image from 'next/image'
+import logo from '@images/logo.png'
 
 // Assets
 
 // Env
 
 // Types
-import { HeaderProps as Props } from './Header.types'
+// import { HeaderProps as Props } from './Header.types'
 
 // Styles
 import * as S from './Header.styles'
 import { useGetProjectInfo } from '@services/useGetProjectInfo'
 
-const Header = (props: Props): JSX.Element => {
-  const { title } = props
-
+const Header = (): JSX.Element => {
   const t = useTranslations('global')
 
-  const { data, isFetching, isError } = useGetProjectInfo()
+  const projectInfoRequest = useGetProjectInfo()
 
-  const renderContent = (): JSX.Element => {
-    if (isFetching) {
-      return <p>{t('states.loading')}</p>
-    }
-
-    if (isError || !data) {
-      return <p>{t('states.error')}</p>
-    }
-
-    return (
-      <>
-        <S.Title>{data.title}</S.Title>
-        <p>{data.description}</p>
-        <nav>
-          {title}
-          <Link href="/another-page">Outra página</Link>
-        </nav>
-      </>
-    )
+  if (projectInfoRequest.isFetching) {
+    return <p>{t('states.loading')}</p>
   }
 
-  return <S.Container>{renderContent()}</S.Container>
+  if (projectInfoRequest.isError || !projectInfoRequest.data) {
+    return <p>{t('states.error')}</p>
+  }
+
+  return (
+    <S.Container>
+      <Image
+        src={logo.src}
+        alt={projectInfoRequest.data.title}
+        width={271}
+        height={35}
+      />
+      <S.Title>{projectInfoRequest.data.description}</S.Title>
+    </S.Container>
+  )
 }
 
 export default Header
