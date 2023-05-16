@@ -16,7 +16,7 @@ import Link from 'next/link'
 import { HeaderProps as Props } from './Header.types'
 
 // Styles
-import * as Styled from './Header.styles'
+import * as S from './Header.styles'
 import { useGetProjectInfo } from '@services/useGetProjectInfo'
 
 const Header = (props: Props): JSX.Element => {
@@ -37,7 +37,7 @@ const Header = (props: Props): JSX.Element => {
 
     return (
       <>
-        <Styled.Title>{data.title}</Styled.Title>
+        <S.Title>{data.title}</S.Title>
         <p>{data.description}</p>
         <nav>
           {title}
@@ -47,7 +47,7 @@ const Header = (props: Props): JSX.Element => {
     )
   }
 
-  return <Styled.Container>{renderContent()}</Styled.Container>
+  return <S.Container>{renderContent()}</S.Container>
 }
 
 export default Header

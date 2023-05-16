@@ -15,7 +15,7 @@ import React from 'react'
 import { {{pascalCase name}}Props as Props } from './{{pascalCase name}}.types'
 
 // Styles
-import * as Styled from './{{pascalCase name}}.styles'
+import * as S from './{{pascalCase name}}.styles'
 
 const {{pascalCase name}} = (props: Props): JSX.Element => {
   const {
@@ -25,9 +25,9 @@ const {{pascalCase name}} = (props: Props): JSX.Element => {
   // const t = useTranslations()
 
   return (
-    <Styled.Container>
+    <S.Container>
       {title}
-    </Styled.Container>
+    </S.Container>
   )
 }
 
