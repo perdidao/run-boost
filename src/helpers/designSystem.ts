@@ -1,6 +1,11 @@
 import { theme } from '@theme/default'
 import { spacing as sizes } from '@theme/spacing'
-import { FontPresetSize, MediaSize, Size } from '@theme/types'
+import {
+  FontPresetSize,
+  MediaSize,
+  PrimitiveThemeColors,
+  Size,
+} from '@theme/types'
 
 /**
  * Helper to convert pixel to rem
@@ -33,11 +38,14 @@ export function spacing(size: Size): string {
 export function color(color: string): string {
   const colorCodes: string[] = color.split('-')
 
+  const key = colorCodes[0] as PrimitiveThemeColors
+
   if (colorCodes.length > 1) {
-    return theme.colors[colorCodes[0]][colorCodes[1]] // eslint-disable-line
+    // eslint-disable-next-line
+    return theme.colors[colorCodes[0]][colorCodes[1]]
   }
 
-  return theme.colors[colorCodes[0]] // eslint-disable-line
+  return theme.colors[key]
 }
 
 /**

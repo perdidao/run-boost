@@ -10,6 +10,8 @@ export interface ThemeColorsProps {
   feedback: Record<string, string>
 }
 
+export type PrimitiveThemeColors = 'primary' | 'white' | 'black'
+
 export interface ThemeFontsProps {
   primary: string
   secondary: string
