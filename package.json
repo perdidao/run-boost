@@ -12,8 +12,9 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "prettier --list-different",
-      "tsc --noEmit && eslint --ext .js,.jsx,.ts,.tsx ./ --fix --max-warnings 0"
+      "prettier --write *.{js,jsx,ts,tsx,json}",
+      "prettier --write **/*.{js,jsx,ts,tsx,json}",
+      "eslint --ext .ts,.tsx ./ --fix --max-warnings 0"
     ]
   },
   "dependencies": {
@@ -37,6 +38,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "plop": "^3.1.1",
+    "prettier": "^2.8.8",
     "typescript": "4.7.4"
   }
 }

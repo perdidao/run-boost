@@ -1,6 +1,7 @@
 import { toRem } from '@helpers/platipus'
+import { ThemeFontsProps } from './types'
 
-export const fonts: Record<string, unknown> = {
+export const fonts: ThemeFontsProps = {
   primary: '"Sora", sans-serif',
   secondary: '"Archivo", sans-serif',
 

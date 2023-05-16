@@ -1,6 +1,6 @@
 import { toRem } from '@helpers/platipus'
 
-export const spacing = {
+export const spacing: Record<string, string> = {
   nano: toRem(4),
   tiny: toRem(8),
   xxxs: toRem(12),

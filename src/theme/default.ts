@@ -1,8 +1,9 @@
 import { colors } from './colors'
 import { fonts } from './fonts'
 import { spacing } from './spacing'
+import { ThemeProps } from './types'
 
-export const theme: Record<string, unknown> = {
+export const theme: ThemeProps = {
   fonts: fonts,
   colors: colors,
   spacing: spacing,

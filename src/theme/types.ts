@@ -1,3 +1,31 @@
+export interface ThemeColorsProps {
+  primary: string
+  white: string
+  black: string
+  brand: Record<string, string>
+  shadow: Record<string, string>
+  background: Record<string, string>
+  border: Record<string, string>
+  content: Record<string, string | Record<string, string>>
+  feedback: Record<string, string>
+}
+
+export interface ThemeFontsProps {
+  primary: string
+  secondary: string
+  weight: Record<string, string>
+  size: Record<string, string>
+  height: Record<string, string>
+  spacing: Record<string, string>
+}
+
+export interface ThemeProps {
+  colors: ThemeColorsProps
+  fonts: ThemeFontsProps
+  spacing: Record<string, string>
+  animation: Record<string, string>
+}
+
 export type Size =
   | 'nano'
   | 'tiny'
