@@ -1,6 +1,10 @@
 {
   "global": {
     "title": "Run Boost",
-    "heading": "Projetos robustos e instantâneos"
+    "heading": "Projetos robustos e instantâneos",
+    "states": {
+      "error": "Ocorreu um erro",
+      "loading": "Carregando"
+    }
   }
 }

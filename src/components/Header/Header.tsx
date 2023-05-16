@@ -32,15 +32,13 @@ const Header = (props: Props): JSX.Element => {
     isError
   } = useGetProjectInfo()
 
-  console.log(data)
-
   const renderContent = (): JSX.Element => {
     if (isFetching) {
-      return <p>Carregando...</p>
+      return <p>{t('states.loading')}</p>
     }
     
     if (isError || !data) {
-      return <p>An error occurred...</p>
+      return <p>{t('states.error')}</p>
     }
 
     return (
