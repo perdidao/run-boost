@@ -31,11 +31,6 @@ export const colors: ThemeColorsProps = {
     primary: '#FFF',
     secondary: 'rgba(255,255,255,.80)',
     tertiary: 'rgba(255,255,255,.40)',
-    inverted: {
-      primary: 'rgba(0,0,0,.88)',
-      secondary: 'rgba(0,0,0,.64)',
-      tertiary: 'rgba(0,0,0,.40)',
-    },
   },
 
   feedback: {

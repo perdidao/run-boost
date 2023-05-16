@@ -6,11 +6,18 @@ export interface ThemeColorsProps {
   shadow: Record<string, string>
   background: Record<string, string>
   border: Record<string, string>
-  content: Record<string, string | Record<string, string>>
+  content: Record<string, string>
   feedback: Record<string, string>
 }
 
 export type PrimitiveThemeColors = 'primary' | 'white' | 'black'
+export type DeepThemeColors =
+  | 'brand'
+  | 'shadow'
+  | 'background'
+  | 'border'
+  | 'content'
+  | 'feedback'
 
 export interface ThemeFontsProps {
   primary: string

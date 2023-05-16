@@ -1,6 +1,7 @@
 import { theme } from '@theme/default'
 import { spacing as sizes } from '@theme/spacing'
 import {
+  DeepThemeColors,
   FontPresetSize,
   MediaSize,
   PrimitiveThemeColors,
@@ -38,13 +39,15 @@ export function spacing(size: Size): string {
 export function color(color: string): string {
   const colorCodes: string[] = color.split('-')
 
-  const key = colorCodes[0] as PrimitiveThemeColors
-
   if (colorCodes.length > 1) {
-    // eslint-disable-next-line
-    return theme.colors[colorCodes[0]][colorCodes[1]]
+    const context = colorCodes[0] as DeepThemeColors
+    const colorContext = theme.colors[context]
+    const colorName = colorCodes[1]
+
+    return colorContext[colorName]
   }
 
+  const key = colorCodes[0] as PrimitiveThemeColors
   return theme.colors[key]
 }
 
