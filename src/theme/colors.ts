@@ -1,4 +1,4 @@
-export const colors: any = {
+export const colors: Record<string, unknown> = {
   primary: '#FF781F',
   white: '#FFFFFF',
   black: '#000000',
