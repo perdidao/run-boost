@@ -34,10 +34,10 @@ export function color(color: string): string {
   const colorCodes: string[] = color.split('-')
 
   if (colorCodes.length > 1) {
-    return theme.colors[colorCodes[0]][colorCodes[1]]
+    return theme.colors[colorCodes[0]][colorCodes[1]] // eslint-disable-line
   }
 
-  return theme.colors[colorCodes[0]]
+  return theme.colors[colorCodes[0]] // eslint-disable-line
 }
 
 /**

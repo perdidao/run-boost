@@ -16,28 +16,20 @@ import { Header } from '@components/Header'
 
 // Components
 
-const DefaultLayout = ({
-  children,
-  title,
-  description
-}: LayoutProps) => {
+const DefaultLayout = ({ children, title, description }: LayoutProps) => {
   const t = useTranslations('global')
 
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>
-          {`${title} | Run Boost - ${t('heading')}`}
-        </title>
+        <title>{`${title} | Run Boost - ${t('heading')}`}</title>
         <meta
           name="description"
           content={description ? description : t('heading')}
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <Header
-        title={title}
-      />
+      <Header title={title} />
       {children}
     </ThemeProvider>
   )

@@ -20,23 +20,17 @@ import * as Styled from './Header.styles'
 import { useGetProjectInfo } from '@services/useGetProjectInfo'
 
 const Header = (props: Props): JSX.Element => {
-  const {
-    title
-  } = props
+  const { title } = props
 
   const t = useTranslations('global')
 
-  const {
-    data,
-    isFetching,
-    isError
-  } = useGetProjectInfo()
+  const { data, isFetching, isError } = useGetProjectInfo()
 
   const renderContent = (): JSX.Element => {
     if (isFetching) {
       return <p>{t('states.loading')}</p>
     }
-    
+
     if (isError || !data) {
       return <p>{t('states.error')}</p>
     }
@@ -53,11 +47,7 @@ const Header = (props: Props): JSX.Element => {
     )
   }
 
-  return (
-    <Styled.Container>
-      {renderContent()}
-    </Styled.Container>
-  )
+  return <Styled.Container>{renderContent()}</Styled.Container>
 }
 
 export default Header

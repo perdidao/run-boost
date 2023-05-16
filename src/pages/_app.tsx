@@ -12,7 +12,7 @@ import '@theme/global.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient()
-  
+
   return (
     <NextIntlProvider messages={pageProps.messages}>
       <QueryClientProvider client={queryClient}>

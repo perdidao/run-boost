@@ -1,4 +1,4 @@
-import { toRem } from '@helpers/platipus'
+import { toRem } from '@helpers/designSystem'
 import { ThemeFontsProps } from './types'
 
 export const fonts: ThemeFontsProps = {

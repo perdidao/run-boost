@@ -1,4 +1,4 @@
-import { toRem } from '@helpers/platipus'
+import { toRem } from '@helpers/designSystem'
 
 export const spacing: Record<string, string> = {
   nano: toRem(4),

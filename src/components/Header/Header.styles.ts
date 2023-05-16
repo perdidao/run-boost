@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 // Helpers
-import { fontTitle, color } from '@helpers/platipus'
+import { fontTitle, color } from '@helpers/designSystem'
 
 // Types
 
