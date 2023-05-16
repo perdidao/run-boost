@@ -2,7 +2,7 @@ import { colors } from './colors'
 import { fonts } from './fonts'
 import { spacing } from './spacing'
 
-export const theme: any = {
+export const theme: Record<string, unknown> = {
   fonts: fonts,
   colors: colors,
   spacing: spacing,
